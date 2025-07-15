@@ -64,6 +64,7 @@
                             <a href="{% url 'call-to-action' %}" class="dropdown-item">Become A Teachers</a>
                             <a href="a{% url 'appointment' %}" class="dropdown-item">Make Appointment</a>
                             <a href="{% url 'testimonial' %}" class="dropdown-item">Testimonial</a>
+                            <a href="{% url 'gallery' %}" class="dropdown-item">Gallery</a>
                             <!-- <a href="{% url '404' %}" class="dropdown-item">404 Error</a> -->
                         </div>
                     </div>
@@ -161,25 +162,34 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Popular Teachers</h1>
+                    <h1 class="mb-3">Head Of The School</h1>
                     <p>Meet our most loved teachers — dedicated, experienced, and cherished by students for their inspiring guidance.</p>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item position-relative">
-                            <img class="img-fluid rounded-circle w-75" src="{% static 'img/team-1.jpg' %}" alt="">
-                            <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8 col-md-10 mx-auto wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="bg-white rounded shadow-sm p-4 d-flex flex-row align-items-center" style="min-height: 280px;">
+                            <!-- Team Card (left side) -->
+                            <div class="d-flex flex-column align-items-center justify-content-center me-4" style="min-width:180px;">
+                                <img class="img-fluid rounded-circle mb-2" src="{% static 'img/teacher.jpg' %}" alt="" style="width:180px; height:180px; object-fit:cover;">
+                                <!-- <h3 class="mb-1" style="font-size:1.3rem;">Mrs. Navina Raheja</h3> -->
+                                <!-- <p class="mb-2" style="font-size:1rem;">Phd</p> -->
                                 <div class="d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
                                 </div>
+                            </div>
+                            <!-- Info (right side, inside white box) -->
+                            <div class="flex-grow-1 d-flex flex-column justify-content-center">
+                                <h3 class="mb-1" style="font-size:1.3rem;">Mrs. Navina Raheja</h3>
+                                    <p class="mb-0" style="font-size:1.3rem;">
+                                        As the Head of HappyKidzClub, she brings over a decade of experience in early childhood education and leadership. Her vision is to create a nurturing and joyful environment where every child feels valued, confident, and eager to learn. With a strong belief in play-based and positive learning, she leads with warmth, creativity, and purpose. Her dedication inspires both students and teachers to grow every day.
+                                    </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                </div>
+                    <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="team-item position-relative">
                             <img class="img-fluid rounded-circle w-75" src="{% static 'img/team-2.jpg' %}" alt="">
                             <div class="team-text">
@@ -206,7 +216,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

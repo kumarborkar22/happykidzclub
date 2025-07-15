@@ -51,6 +51,10 @@ def testimonial(request):
 def error_404(request, exception):
     return render(request, '404.html', status=404)
 
+def gallery(request):
+    images = range(1, 31)  # 1 to 30
+    return render(request, 'gallery.html', {'images': images})
+
 # api views....
 
 from rest_framework.decorators import api_view

@@ -9,6 +9,7 @@ from .views import (
     appointment,
     testimonial,
     error_404,
+    gallery,
 
     contact_messages_api,
 )
@@ -26,6 +27,7 @@ urlpatterns = [
     path('appointment/', appointment, name='appointment'),
     path('testimonial/', testimonial, name='testimonial'),
     path('404/', error_404, name='404'),
+    path('gallery/', gallery, name='gallery'),
 
     path('api/contact-messages/', contact_messages_api, name='contact_messages_api'),
 
