@@ -11,9 +11,7 @@ from .views import (
     error_404,
     gallery,
 
-    contact_messages_api,
-    appointment_api,
-)
+    contact_messages_api,)
 
 from django.urls import path
 
@@ -31,7 +29,5 @@ urlpatterns = [
     path('gallery/', gallery, name='gallery'),
 
     path('api/contact-messages/', contact_messages_api, name='contact_messages_api'),
-    path('api/appointments/', appointment_api, name='appointment_api'),
-
 
 ]
