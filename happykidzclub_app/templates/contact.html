@@ -1,3 +1,4 @@
+{% load widget_tweaks %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +61,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 m-0">
                             <a href="{% url 'facility' %}" class="dropdown-item">School Facilities</a>
-                            <a href="{% url 'team' %}" class="dropdown-item">Popular Teachers</a>
+                            <!-- <a href="{% url 'team' %}" class="dropdown-item">Popular Teachers</a> -->
                             <a href="{% url 'call-to-action' %}" class="dropdown-item">Become A Teachers</a>
                             <a href="{% url 'appointment' %}" class="dropdown-item">Make Appointment</a>
                             <a href="{% url 'testimonial' %}" class="dropdown-item">Testimonial</a>
@@ -124,43 +125,43 @@
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
                                 <!-- <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
-                                <form method="post" novalidate>
-                                    {% csrf_token %}
-                                    {% if messages %}
-                                    {% for message in messages %}
-                                        <div class="alert alert-success">{{ message }}</div>
-                                    {% endfor %}
-                                    {% endif %}
-                                    <div class="row g-3">
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                {{ form.name }}
-                                                <label for="{{ form.name.id_for_label }}">Your Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-floating">
-                                                {{ form.email }}
-                                                <label for="{{ form.email.id_for_label }}">Your Email</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                {{ form.subject }}
-                                                <label for="{{ form.subject.id_for_label }}">Subject</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                {{ form.message }}
-                                                <label for="{{ form.message.id_for_label }}">Message</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                        </div>
-                                    </div>
-                                </form>
+<form method="post" novalidate>
+    {% csrf_token %}
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    <div class="row g-3">
+        <div class="col-sm-6">
+            <div class="form-floating">
+                {{ form.name|add_class:"form-control" }}
+                <label for="{{ form.name.id_for_label }}">Your Name</label>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-floating">
+                {{ form.email|add_class:"form-control" }}
+                <label for="{{ form.email.id_for_label }}">Your Email</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                {{ form.subject|add_class:"form-control" }}
+                <label for="{{ form.subject.id_for_label }}">Subject</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                {{ form.message|add_class:"form-control" }}
+                <label for="{{ form.message.id_for_label }}">Message</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+        </div>
+    </div>
+</form>
                             </div>
                         </div>
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">

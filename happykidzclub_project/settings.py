@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'happykidzclub_app',
-    'corsheaders'
+    'corsheaders',
+    'widget_tweaks',  # For customizing form widgets in templates
 ]
 
 MIDDLEWARE = [

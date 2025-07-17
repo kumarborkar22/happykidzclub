@@ -42,8 +42,18 @@ def team(request):
 def call_to_action(request):
     return render(request, 'call-to-action.html')
 
+from .forms import AppointmentForm
+
 def appointment(request):
-    return render(request, 'appointment.html')
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your appointment has been submitted!")
+            return redirect('appointment')
+    else:
+        form = AppointmentForm()
+    return render(request, 'appointment.html', {'form': form})
 
 def testimonial(request):
     return render(request, 'testimonial.html')
@@ -66,3 +76,19 @@ def contact_messages_api(request):
     messages = ContactMessage.objects.all().order_by('-created_at')
     serializer = ContactMessageSerializer(messages, many=True)
     return Response(serializer.data)
+
+from .models import Appointment
+from .serializers import AppointmentSerializer
+
+@api_view(['GET', 'POST'])
+def appointment_api(request):
+    if request.method == 'GET':
+        appointments = Appointment.objects.all().order_by('-created_at')
+        serializer = AppointmentSerializer(appointments, many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        serializer = AppointmentSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)

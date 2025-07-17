@@ -60,7 +60,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
                             <a href="{% url 'facility' %}" class="dropdown-item">School Facilities</a>
-                            <a href="{% url 'team' %}" class="dropdown-item">Popular Teachers</a>
+                            <!-- <a href="{% url 'team' %}" class="dropdown-item">Popular Teachers</a> -->
                             <a href="{% url 'call-to-action' %}" class="dropdown-item">Become A Teachers</a>
                             <a href="{% url 'appointment' %}" class="dropdown-item">Make Appointment</a>
                             <a href="{% url 'testimonial' %}" class="dropdown-item">Testimonial</a>
@@ -180,6 +180,289 @@
         </div>
         <!-- Facilities End -->
 
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="mb-4">Learn More About Our Work And Our Cultural Activities</h1>
+                        <p>Discover more about our vision, daily learning experiences, and vibrant cultural activities that enrich every child’s journey.</p>
+                        <div class="row g-4 align-items-center">
+                            <div class="col-sm-6">
+                                <a class="btn btn-primary rounded-pill py-3 px-5" href="">Read More</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <!-- <div class="d-flex align-items-center">
+                                    <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                    <div class="ms-3">
+                                        <h6 class="text-primary mb-1">NextGenTech</h6>
+                                        <small>CEO & Founder</small>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="{% static 'img/about-1.jpg' %}" alt="">
+                            </div>
+                            <div class="col-6 text-start" style="margin-top: -150px;">
+                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="{% static 'img/about-2.jpg' %}" alt="">
+                            </div>
+                            <div class="col-6 text-end" style="margin-top: -150px;">
+                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="{% static 'img/about-3.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+         <!-- Classes Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">School Classes</h1>
+                    <p>Engaging classes designed for every age group, blending academics with creativity and curiosity.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="classes-item">
+                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                                <img class="img-fluid rounded-circle" src="{% static 'img/classes-1.jpg' %}" alt="">
+                            </div>
+                            <div class="bg-light rounded p-4 pt-5 mt-n5">
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">Art & Drawing</a>
+                                <!-- <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                        <div class="ms-3">
+                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <small>Teacher</small>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="row g-1">
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-primary pt-2">
+                                            <h6 class="text-primary mb-1">Age:</h6>
+                                            <small>3-5 Years</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-success pt-2">
+                                            <h6 class="text-success mb-1">Time:</h6>
+                                            <small>9-10 AM</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-warning pt-2">
+                                            <h6 class="text-warning mb-1">Capacity:</h6>
+                                            <small>30 Kids</small>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="classes-item">
+                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                                <img class="img-fluid rounded-circle" src="{% static 'img/classes-2.jpg' %}" alt="">
+                            </div>
+                            <div class="bg-light rounded p-4 pt-5 mt-n5">
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">Color Management</a>
+                                <!-- <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                        <div class="ms-3">
+                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <small>Teacher</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-1">
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-primary pt-2">
+                                            <h6 class="text-primary mb-1">Age:</h6>
+                                            <small>3-5 Years</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-success pt-2">
+                                            <h6 class="text-success mb-1">Time:</h6>
+                                            <small>9-10 AM</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-warning pt-2">
+                                            <h6 class="text-warning mb-1">Capacity:</h6>
+                                            <small>30 Kids</small>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="classes-item">
+                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                                <img class="img-fluid rounded-circle" src="{% static 'img/classes-3.jpg' %}" alt="">
+                            </div>
+                            <div class="bg-light rounded p-4 pt-5 mt-n5">
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">Athletic & Dance</a>
+                                <!-- <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                        <div class="ms-3">
+                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <small>Teacher</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-1">
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-primary pt-2">
+                                            <h6 class="text-primary mb-1">Age:</h6>
+                                            <small>3-5 Years</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-success pt-2">
+                                            <h6 class="text-success mb-1">Time:</h6>
+                                            <small>9-10 AM</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-warning pt-2">
+                                            <h6 class="text-warning mb-1">Capacity:</h6>
+                                            <small>30 Kids</small>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="classes-item">
+                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                                <img class="img-fluid rounded-circle" src="{% static 'img/classes-4.jpg' %}" alt="">
+                            </div>
+                            <div class="bg-light rounded p-4 pt-5 mt-n5">
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">Language & Speaking</a>
+                                <!-- <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                        <div class="ms-3">
+                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <small>Teacher</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-1">
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-primary pt-2">
+                                            <h6 class="text-primary mb-1">Age:</h6>
+                                            <small>3-5 Years</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-success pt-2">
+                                            <h6 class="text-success mb-1">Time:</h6>
+                                            <small>9-10 AM</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-warning pt-2">
+                                            <h6 class="text-warning mb-1">Capacity:</h6>
+                                            <small>30 Kids</small>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="classes-item">
+                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                                <img class="img-fluid rounded-circle" src="{% static 'img/classes-5.jpg' %}" alt="">
+                            </div>
+                            <div class="bg-light rounded p-4 pt-5 mt-n5">
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">Religion & History</a>
+                                <!-- <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                        <div class="ms-3">
+                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <small>Teacher</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-1">
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-primary pt-2">
+                                            <h6 class="text-primary mb-1">Age:</h6>
+                                            <small>3-5 Years</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-success pt-2">
+                                            <h6 class="text-success mb-1">Time:</h6>
+                                            <small>9-10 AM</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-warning pt-2">
+                                            <h6 class="text-warning mb-1">Capacity:</h6>
+                                            <small>30 Kids</small>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="classes-item">
+                            <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                                <img class="img-fluid rounded-circle" src="{% static 'img/classes-6.jpg' %}" alt="">
+                            </div>
+                            <div class="bg-light rounded p-4 pt-5 mt-n5">
+                                <a class="d-block text-center h3 mt-3 mb-4" href="">General Knowledge</a>
+                                <!-- <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <div class="d-flex align-items-center">
+                                        <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                        <div class="ms-3">
+                                            <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                            <small>Teacher</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-1">
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-primary pt-2">
+                                            <h6 class="text-primary mb-1">Age:</h6>
+                                            <small>3-5 Years</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-success pt-2">
+                                            <h6 class="text-success mb-1">Time:</h6>
+                                            <small>9-10 AM</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="border-top border-3 border-warning pt-2">
+                                            <h6 class="text-warning mb-1">Capacity:</h6>
+                                            <small>30 Kids</small>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
         <!-- ...existing code... -->
         <!-- The rest of your file remains unchanged, just update all static file references as above -->
         <!-- ...existing code... -->
@@ -292,6 +575,7 @@
     <script>
         const lightbox = GLightbox({ selector: '.glightbox' });
     </script>
+    
 </body>
 
 </html>
