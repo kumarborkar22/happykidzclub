@@ -507,40 +507,46 @@
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
                                 <h1 class="mb-4">Make Appointment</h1>
-                                <form>
+                                <form method="post" id="appointmentForm">
+                                    {% csrf_token %}
                                     <div class="row g-3">
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="gname" placeholder="Gurdian Name">
-                                                <label for="gname">Gurdian Name</label>
+                                                <input type="text" class="form-control border-0" id="id_guardian_name" name="guardian_name" placeholder="Guardian Name" required value="{% if form.guardian_name.value %}{{ form.guardian_name.value }}{% endif %}">
+                                                <label for="id_guardian_name">Guardian Name</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="email" class="form-control border-0" id="gmail" placeholder="Gurdian Email">
-                                                <label for="gmail">Gurdian Email</label>
+                                                <input type="email" class="form-control border-0" id="id_guardian_email" name="guardian_email" placeholder="Guardian Email" required value="{% if form.guardian_email.value %}{{ form.guardian_email.value }}{% endif %}">
+                                                <label for="id_guardian_email">Guardian Email</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cname" placeholder="Child Name">
-                                                <label for="cname">Child Name</label>
+                                                <input type="text" class="form-control border-0" id="id_child_name" name="child_name" placeholder="Child Name" required value="{% if form.child_name.value %}{{ form.child_name.value }}{% endif %}">
+                                                <label for="id_child_name">Child Name</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cage" placeholder="Child Age">
-                                                <label for="cage">Child Age</label>
+                                                <input type="text" class="form-control border-0" id="id_child_age" name="child_age" placeholder="Child Age" required value="{% if form.child_age.value %}{{ form.child_age.value }}{% endif %}">
+                                                <label for="id_child_age">Child Age</label>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                                <label for="message">Message</label>
+                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="id_message" name="message" style="height: 100px">{% if form.message.value %}{{ form.message.value }}{% endif %}</textarea>
+                                                <label for="id_message">Message</label>
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                            <button class="btn btn-primary w-100 py-3" type="submit" id="submitBtn">
+                                                <span id="submitText">Submit</span>
+                                                <span id="submitSpinner" class="spinner-border spinner-border-sm d-none ms-2" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </span>
+                                            </button>
                                         </div>
                                     </div>
                                 </form>

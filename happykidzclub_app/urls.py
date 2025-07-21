@@ -11,7 +11,10 @@ from .views import (
     error_404,
     gallery,
 
-    contact_messages_api,)
+    contact_messages_api,
+    
+    appointment_api,
+    appointment_detail_api,)
 
 from django.urls import path
 
@@ -29,5 +32,11 @@ urlpatterns = [
     path('gallery/', gallery, name='gallery'),
 
     path('api/contact-messages/', contact_messages_api, name='contact_messages_api'),
+
+     # AJAX endpoint
+    
+    # API endpoints
+    path('api/appointments/', appointment_api, name='appointment_api'),
+    path('api/appointments/<int:pk>/', appointment_detail_api, name='appointment_detail_api'),
 
 ]
