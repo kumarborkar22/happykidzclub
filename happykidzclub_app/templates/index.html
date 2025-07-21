@@ -475,11 +475,11 @@
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Get In Touch</h3>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Pune, Maharashtra, India</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8459888489</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9823162786</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>happykidzclub9@gmail.com</p>
                         <div class="d-flex pt-2">
                             <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
-                            <a class="btn btn-outline-light btn-social" href="https://wa.me/918459888489" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://wa.me/919823162786" target="_blank"><i class="fab fa-whatsapp"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
@@ -558,6 +558,10 @@
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <!-- WhatsApp Float Button -->
+        <a href="https://wa.me/919823162786" target="_blank" class="btn btn-lg btn-success btn-lg-square whatsapp-float">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -575,6 +579,86 @@
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
         const lightbox = GLightbox({ selector: '.glightbox' });
+    </script>
+    <!-- Custom CSS for WhatsApp Float Button -->
+    <style>
+        .whatsapp-float {
+    position: fixed;
+    left: 33px;
+    bottom: 45px;
+    z-index: 99;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: #25d366;
+    color: white;
+    cursor: pointer;
+    padding: 0; /* Remove padding - this was making it square */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    animation: pulse 2s infinite;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.whatsapp-float i {
+    font-size: 28px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        left: 25px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+        padding: 0; /* Remove padding for mobile too */
+    }
+    
+    .whatsapp-float i {
+        font-size: 22px; /* Slightly smaller icon for mobile */
+    }
+}
+    </style>
+
+    <!-- JavaScript for WhatsApp Float Button -->
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('.whatsapp-float').addClass('show');
+            } else {
+                $('.whatsapp-float').removeClass('show');
+            }
+        });
     </script>
     
 </body>

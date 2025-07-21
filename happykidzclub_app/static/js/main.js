@@ -79,3 +79,10 @@
     
 })(jQuery);
 
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+        $('.whatsapp-float').addClass('show');
+    } else {
+        $('.whatsapp-float').removeClass('show');
+    }
+});
