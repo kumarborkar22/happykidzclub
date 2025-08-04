@@ -502,3 +502,164 @@ h6,
     border-right: none;
 }
 
+/* View More Photos Button Styles */
+.view-more-btn {
+    background: linear-gradient(135deg, #FE5D37 0%, #E54A2A 100%) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 15px 40px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    color: white !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-decoration: none !important;
+    box-shadow: 0 8px 25px rgba(254, 93, 55, 0.3) !important;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: inline-block !important;
+}
+
+.view-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s;
+}
+
+.view-more-btn:hover::before {
+    left: 100%;
+}
+
+.view-more-btn:hover {
+    background: linear-gradient(135deg, #E54A2A 0%, #CC3E20 100%) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 15px 40px rgba(254, 93, 55, 0.4) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.view-more-btn:active {
+    transform: translateY(-1px) scale(1.02) !important;
+    transition: all 0.1s !important;
+}
+
+.view-more-btn i {
+    font-size: 18px !important;
+    transition: all 0.3s ease !important;
+    margin-right: 8px !important;
+}
+
+.view-more-btn:hover i {
+    transform: scale(1.1) rotate(5deg) !important;
+}
+
+/* Focus state for accessibility */
+.view-more-btn:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(254, 93, 55, 0.3) !important;
+}
+
+/* Alternative button styles */
+.view-more-btn-dark {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 15px 40px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    color: white !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-decoration: none !important;
+    box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3) !important;
+    transition: all 0.4s ease !important;
+    display: inline-block !important;
+}
+
+.view-more-btn-dark:hover {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 15px 40px rgba(44, 62, 80, 0.4) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.view-more-btn-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 15px 40px !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    color: white !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-decoration: none !important;
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3) !important;
+    transition: all 0.4s ease !important;
+    display: inline-block !important;
+}
+
+.view-more-btn-success:hover {
+    background: linear-gradient(135deg, #20c997 0%, #28a745 100%) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .view-more-btn,
+    .view-more-btn-dark,
+    .view-more-btn-success {
+        padding: 12px 30px !important;
+        font-size: 14px !important;
+        letter-spacing: 0.5px !important;
+    }
+    
+    .view-more-btn:hover,
+    .view-more-btn-dark:hover,
+    .view-more-btn-success:hover {
+        transform: translateY(-2px) scale(1.02) !important;
+    }
+    
+    .view-more-btn i,
+    .view-more-btn-dark i,
+    .view-more-btn-success i {
+        font-size: 16px !important;
+    }
+}
+
+/* Loading animation for when clicking external link */
+.view-more-btn.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.view-more-btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    border: 2px solid white;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
