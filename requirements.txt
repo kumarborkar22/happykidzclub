@@ -37,6 +37,7 @@ gunicorn==23.0.0
 h11==0.16.0
 httplib2==0.22.0
 huggingface-hub==0.30.2
+django-widget-tweaks==1.4.12
 idna==3.10
 inflection==0.5.1
 itsdangerous==2.2.0
